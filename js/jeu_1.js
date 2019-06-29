@@ -443,14 +443,10 @@ function calculScore(niveau)
 				 boutonElt8.addEventListener("mousedown", function (){
 					
 					 for (var i=0 ; i < form.elements.propositions.length; i++){
-							console.log(form.elements.propositions.options[i].value.toUpperCase());	 
-							var bool = verification(form.elements.propositions.options[i].value.toUpperCase());
-							console.log(bool);
-						 if ( bool == true ){
 							 
 							form.elements.propositions.options[i].selected = "selected" ;
 						 }
-					 }	
+					
 					 
 					 var test2 = calculScore( form.elements.niveau.value );
 					 score = test2;
@@ -460,64 +456,3 @@ function calculScore(niveau)
 			        	
 							
 			});
-			
-			
-			
-function verification(mot){
-	
-	console.log(mot);
-	var chaineAle = '';
-	var conforme = true ; 
-	if (form.elements.niveau.value == "facile"){
-		for (var i =0; i<10 ; i++){
-			chaineAle =  chaineAle + document.getElementById("name_input"+i).value;
-		}
-	}
-	else {
-		for (var i =0; i<8 ; i++){
-			chaineAle += document.getElementById("name_input"+i).value;
-		}
-	}
-	
-	var chaine = new String(chaineAle);
-	
-	
-	var i = 0;
-
-	while((i< mot.length)&&(conforme == true)) {
-		
-		if (chaine.indexOf(mot[i]) == -1){
-			conforme = false ;
-		}
-		
-		else if (chaine.indexOf(mot[i]) == (chaineAle.length -1))
-		{
-			chaine.valueOf() = chaine.substring(0, chaine.indexOf(mot[i])-1);
-			i++;
-		}
-		
-		else 
-		{
-			var nick_1 = chaine.substring(0, chaine.indexOf(mot[i])-1);
-			var nick_2 = chaine.substring(chaine.indexOf(mot[i])+ 1); 
-			
-			console.log ( chaine.valueOf() ); 
-			console.log (  nick_1.valueOf() );
-			console.log ( nick_2.valueOf() );
-			console.log ( typeof ( nick_1.valueOf().concat(nick_2.valueOf()) ));
-			chaine.valueOf() = String(nick_1.valueOf().concat(nick_2.valueOf())) ;
-			i++;
-		}
-		
-		
-	}
-	
-	
-	console.log(conforme);
-	
-	//var result = chaineAle.indexOf('A');
-	//console.log(result);
-	return true ;
-	
-	
-}

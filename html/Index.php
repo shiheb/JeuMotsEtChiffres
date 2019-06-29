@@ -120,7 +120,7 @@
          </table>	
     <p style="text-indent:150px" >
 		
-		<input type="submit" value="Soumettre vos propositions" class="terminerjeu" >
+		<input type="button" value="Soumettre vos propositions" class="terminerjeu" >
 		<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>		
 		<input type="button" value="Vous ne trouvez pas ?" class="aideJeu" Id="aideJeu">		

@@ -72,7 +72,7 @@ function diminuerCompteur() {
         titre.textContent = "Temps écoulé !";
 		
 		//form.reset();
-		location.reload(); 
+		//location.reload(); 
 		//location.assign("Index.php");
 
     }
@@ -224,7 +224,7 @@ document.getElementById("propositions").innerHTML = "";
 });
 
 
-	var motValide = true ; 
+
 
 document.getElementById("proposition").addEventListener("input", function (e) {
 	
@@ -236,42 +236,6 @@ document.getElementById("proposition").addEventListener("input", function (e) {
 	var	val = testElt.value;
 	var motpropose = e.target.value; // Valeur saisie dans le champ mdp
 	var aideMdpElt = document.getElementById("controleProposition");
-	
-	
-	var chaineAle = '';
-	
-	if (form.elements.niveau.value == "facile"){
-		for (var i =0; i<10 ; i++){
-			chaineAle =  chaineAle + document.getElementById("name_input"+i).value;
-		}
-	}
-	else {
-		for (var i =0; i<8 ; i++){
-			chaineAle += document.getElementById("name_input"+i).value;
-		}
-	}
-	
-	//console.log(chaineAle);
-	
-	//console.log(motpropose[motpropose.length - 1].toUpperCase());
-	var string_1 = new String(chaineAle);
-	var string_2 = new String(motpropose[motpropose.length - 1].toUpperCase());
-	
-	var result = string_1.valueOf().toUpperCase().indexOf(string_2.valueOf().toUpperCase());
-	console.log(string_1);
-	console.log(string_2);
-	console.log(result);
-	if(result == -1 ){
-		
-	var chaineAux ='';
-	for (var i =0 ;i< motpropose.length -1; i++){
-		chaineAux = chaineAux + motpropose[i];
-		
-		}
-		
-	e.target.value =  chaineAux ;
-		alert("Lettre inexistante ! ");
-	}
 	if (motpropose.length > 10){
 		msgAide = "Mot propos\351 trop longue !";
 		
@@ -466,7 +430,7 @@ function calculScore(niveau)
 	return score1 ;
 }
 				
-				/*
+				
 				var boutonElt8 = (document.getElementsByTagName("input"))[9];
 				 boutonElt8.addEventListener("submit", function (){
 					
@@ -474,7 +438,7 @@ function calculScore(niveau)
 					  
 				});
 				
-			*/
+			
 	var boutonElt8 = (document.getElementsByTagName("input"))[9];
 				 boutonElt8.addEventListener("mousedown", function (){
 					
@@ -492,5 +456,3 @@ function calculScore(niveau)
 			        	
 							
 			});
-
-		
